@@ -1,0 +1,62 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 4.5px;
+  padding: 0 54px 18px 54px;
+  &__todo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+    padding: 5px 18px;
+
+    &--head {
+      display: flex;
+      &---icon {
+        display: flex;
+        width: 30px;
+        cursor: pointer;
+      }
+      &---text {
+        // display: block;
+
+        // width: 100%;
+        padding: 9px 18px;
+        border: none;
+        box-shadow: none;
+        // cursor: pointer;
+        opacity: 1;
+        color: #495057;
+        font-size: 1.5rem;
+        border-radius: 0.25rem !important;
+        background-color: transparent !important;
+        background-clip: padding-box;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        height: calc(2.875rem + 2px);
+        line-height: 1.5;
+      }
+    }
+    &--action {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &---icon {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.list__todo--action---time-lb {
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.5) !important;
+  font-size: 0.8rem;
+}
+.list__todo--head {
+  & > input.completed {
+    font-style: italic;
+    text-decoration: line-through;
+    color: #ccc;
+  }
+}
